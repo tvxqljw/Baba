@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="app.css">
+    <title>给萌娃喂食</title>
+</head>
+
+<body onload="gameStart()" ontouchstart="checkNow()" onkeypress="checkNow()">
+<!--game start display-->
+<div id="GameStart" style="display: none;">
+    <div id="gamestartMain">
+        <div id="gamestartText">
+            <h2></h2>
+        </div>
+
+        <div class="fancy" style="margin: 0 auto; padding: 0">
+        </div>
+
+        <div id="startgameButton">
+            <a class="btn btn-block btn-lg redbuttonColor">
+                <p>当宝贝请求的食物恰好出现在中间时，点击屏幕任意位置以完成喂食</p>
+                <a href="javascript:void(0);" onclick="RoleOpen()"
+                   style="color: #e74c3c;border: 2px solid #e76e62;border-radius: 3px;padding: 3px">开始</a>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!--role choose display-->
+<div id="Role" style="display: none;">
+    <div class="role">
+        <div id="duoduo" onclick="roleChoose('duoduo',1)"></div>
+    </div>
+    <div class="role">
+        <div id="feynman" onclick="roleChoose('feynman',2)"></div>
+    </div>
+    <div class="role">
+        <div id="joe" onclick="roleChoose('joe',3)"></div>
+    </div>
+    <div class="role">
+        <div id="grace" onclick="roleChoose('grace',4)"></div>
+    </div>
+    <div class="role">
+        <div id="yangyangyang" onclick="roleChoose('yangyangyang',5)"></div>
+    </div>
+    <div class="role">
+        <div id="beier" onclick="roleChoose('beier',6)"></div>
+    </div>
+
+</div>
+
+
+<!--game over display-->
+<div id="GameOver" style="display: none;">
+    <div id="gameoverMain">
+        <div id="gameoverText">
+            <h2>游戏结束</h2>
+        </div>
+
+        <div id="yourScore">
+            <p>
+                <span id="comments"></span>!你给<span id="childname"></span>喂了<span id="theScore"></span>个食物
+                <br>
+                击败了全国
+                <span id="fight">9%</span>的老爸们
+            </p>
+        </div>
+
+        <div id="button">
+            <a id="replay" href="javascript:void(0);" onclick="restartGame()"
+               class="btn btn-block btn-lg bluebuttonColor">再来一次</a>
+        </div>
+
+        <div id="share"></div>
+
+    </div>
+</div>
+<div id="the" style="display:block;"></div>
+
+<!--javascript-->
+<script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://myccnutest.qiniudn.com/baba-phaser-arcade-physics.min.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" src="http://static.whonow.cn/wap/isWhonow3.js"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54659198-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
