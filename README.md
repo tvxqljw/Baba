@@ -2,4 +2,4 @@
 ====
 
 <a href="http://tvxqljw.github.io/Baba/baba/" target="blank">游戏链接</a>
-<img src="">
+<img src="http://tvxqljw.github.io/Baba/baba/assets/QRcode.png">
